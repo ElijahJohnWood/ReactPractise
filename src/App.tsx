@@ -1,17 +1,22 @@
-import { useState } from "react";
-import Alert from "./components/Alert";
-import Button from "./components/Button";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Nopage from "./pages/Nopage";
 
 function App() {
-  const [alertVisible, setAlertVisibility] = useState(false);
-
   return (
-    <div>
-      {alertVisible && (
-        <Alert onClose={() => setAlertVisibility(false)}>My alert</Alert>
-      )}
-      <Button onClick={() => setAlertVisibility(true)}>My Button</Button>
-    </div>
+    <>
+      <div>
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<Nopage />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </>
   );
 }
 
