@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "./buttons/ButtonHeader";
 
 export default function Header() {
   const handleButtonClickHome = () => {

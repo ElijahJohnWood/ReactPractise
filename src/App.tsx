@@ -5,18 +5,16 @@ import Nopage from "./pages/Nopage";
 
 function App() {
   return (
-    <>
-      <div>
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<Nopage />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-    </>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Nopage />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
