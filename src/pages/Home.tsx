@@ -5,6 +5,7 @@ function Home() {
     <>
       <Header />
       <h2>Homepage</h2>
+      <p>Test page</p>
     </>
   );
 }
