@@ -5,6 +5,7 @@ export default function About() {
     <>
       <Header />
       <h2>About Page</h2>
+    <p>Test Page</p>
     </>
   );
 }
